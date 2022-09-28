@@ -1,0 +1,202 @@
+1.print odd numbers in an array.
+
+Anonymous:
+
+var arr=[12,13,14,15];
+var b=[];
+var res= function(arr)
+{
+for(var i=0;i<arr.length;i++)
+{
+if(arr[i]%2!==0)
+{
+b.push(arr[i]);
+}
+}
+return b;
+}
+console.log(res(arr));
+
+IIFE
+
+(function(arr)
+{
+for(var i=0;i<arr.length;i++)
+{
+if(arr[i]%2!==0)
+{
+b.push(arr[i]);
+}
+}
+return b;
+})([12,13,14,15])
+
+2.convert all the strings to title caps in a string array.
+
+Anoymous:
+var a="hello";
+var res1= function(arr)
+{
+  arr=arr.toLowerCase().split("");
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+     return arr.join('');
+}}
+console.log(res1(a));
+
+IIFE:
+var a="hello";
+(function(arr)
+{
+  arr=arr.toLowerCase().split("");
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+     return arr.join('');
+}})(a)
+
+
+
+3.sum of all numbers in an array
+
+Anonymous:
+
+var arr=[12,13,14,15];
+var b=0;
+var res= function(arr)
+{
+for(var i=0;i<arr.length;i++)
+{
+b=b+arr[i];
+}
+return b;
+}
+console.log(res(arr));
+
+IIFE
+var b=0;
+(function(arr)
+{
+for(var i=0;i<arr.length;i++)
+{
+b=b+arr[i];
+}
+return b;
+})([12,13,14,15])
+
+
+5. return all the Palindromes in an array
+
+Anonymous:
+
+var arr1=["hello", "guvi" , "civic", "madam"];
+var b1=[]
+var res1= function(arr1)
+{
+for(var i=0;i<arr1.length;i++)
+{
+    var d= arr1[i].split("")
+var c=d.reverse().join("");
+if (arr1[i] === c)
+b1.push(arr1[i]);
+}
+return b1;
+}
+console.log(res1(arr1));
+
+IIFE:
+var arr1=["hello", "guvi" , "civic", "madam"];
+var b1=[];
+(function(arr1)
+{
+for(var i=0;i<arr1.length;i++)
+{
+    var d= arr1[i].split("")
+var c=d.reverse().join("");
+if (arr1[i] === c)
+b1.push(arr1[i]);
+}
+return b1;
+})(arr1)
+
+
+6.Return median of two sorted arrays of the same size.
+
+Anonymous:
+
+var arr=[12,13,14,15];
+var arr1= [14,15,16,17];
+var b=0;
+var res = function(arr,arr1)
+{
+var arr3 = arr.concat(arr1);
+for(var i=0;i<arr3.length;i++)
+{
+b=b+arr3[i];
+}
+return b/arr3.length ;
+}
+console.log(res(arr,arr1));
+
+IIFE:
+var arr=[12,13,14,15];
+var arr1= [14,15,16,17];
+var b=0;
+(function(arr,arr1)
+{
+var arr3 = arr.concat(arr1);
+for(var i=0;i<arr3.length;i++)
+{
+b=b+arr3[i];
+}
+return b/arr3.length ;
+})(arr,arr1)
+
+
+7.remove duplicates from an array.
+
+Anonymous:
+
+var arr=["guvi", "hello", "guvi" , "world" , "hello" , "geek", "geek"];
+var res = function(arr)
+{
+var arr1 = [...new Set(arr)];
+
+return arr1 ;
+}
+console.log(res(arr));
+
+IIFE:
+var arr=["guvi", "hello", "guvi" , "world" , "hello" , "geek", "geek"];
+(function(arr)
+{
+var arr1 = [...new Set(arr)];
+
+return arr1 ;
+})(arr)
+
+8.Rotate an array by K times
+
+Anonymous:
+
+var arr=["guvi", "hello","world" , "geek", "print"];
+var res = function(arr, k)
+{
+for(var i=0; i<k;i++)
+{
+arr.unshift(arr.pop())
+}
+
+return arr ;
+}
+console.log(res(arr, 3));
+
+IIFE:
+var arr=["guvi", "hello","world" , "geek", "print"];
+(function(arr, k)
+{
+for(var i=0; i<k;i++)
+{
+arr.unshift(arr.pop())
+}
+return arr ;
+})(arr)
