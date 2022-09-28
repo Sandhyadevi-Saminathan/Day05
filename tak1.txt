@@ -1,0 +1,65 @@
+1.print odd numbers in an array.
+
+var arr=[12,13,14,15];
+var b=[];
+var res=(arr) ==>
+{
+for(var i=0;i<arr.length;i++)
+{
+if(arr[i]%2!==0)
+{
+b.push(arr[i]);
+}
+}
+return b;
+}
+console.log(res(arr));
+
+
+2.convert all the strings to title caps in a string array.
+
+Anoymous:
+var a="hello";
+var res1= (arr) ==>
+{
+  arr=arr.toLowerCase().split("");
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+     return arr.join('');
+}}
+console.log(res1(a));
+
+
+
+3.sum of all numbers in an array
+
+
+var arr=[12,13,14,15];
+var b=0;
+var res=(arr)==>
+{
+for(var i=0;i<arr.length;i++)
+{
+b=b+arr[i];
+}
+return b;
+}
+console.log(res(arr));
+
+
+5. return all the Palindromes in an array
+
+var arr1=["hello", "guvi" , "civic", "madam"];
+var b1=[]
+var res1= (arr1)==>
+{
+for(var i=0;i<arr1.length;i++)
+{
+    var d= arr1[i].split("")
+var c=d.reverse().join("");
+if (arr1[i] === c)
+b1.push(arr1[i]);
+}
+return b1;
+}
+console.log(res1(arr1));
